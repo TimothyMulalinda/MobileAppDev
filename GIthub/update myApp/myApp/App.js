@@ -1,20 +1,27 @@
+//Import
 import React from "react";
+import CoreComponents from "./src/CoreComponents.js";
 import SignIn from "./src/screens/SignIn";
-import CoreComponents from "./src/CoreComponents";
+import SignIn2 from "./src/screens/SignIn2";
+import Register from "./src/screens/Register";
+import UserList from "./src/screens/UserList";
 
 
+const App = () => {
+  return (
+  // <CoreComponents 
+  // title="Hello World!"
+  // subTitle="Welcome to mobile legends"
+  // />
+  // <SignIn/>
 
-// function component
-const App = () =>{
-    return(
-       
-        // <CoreComponents title="Hello World !!!" subTitle="Sayonara..."/>
-        <SignIn/>
-        // <Register/>
-    );
-}
+  //Exercise 9
+  //No. 1
+  <Register/>,
+  //No. 2
+  <UserList/>
+  );
+};
+
+//Export
 export default App;
-//ALT + SHIFT + O = merapikan syntax
-//props read only dan itu turunan dari parents ke child
-//state milik data itu sendiri
-//rnfes

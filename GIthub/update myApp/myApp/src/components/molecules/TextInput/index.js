@@ -5,7 +5,7 @@ const TextInput = ({label, placeHolder, ...rest}) => {
   return (
     <View style={styles.inputContainer}>
       <Text style={styles.label}>{label}</Text>
-      <Input placeholder={placeHolder} style={styles.text} {...rest} />
+      <Input placeholder={placeHolder} style={styles.text} value={value} onChangeText={text => onChangeText(text)} {...rest} />
     </View>
   );
 };
