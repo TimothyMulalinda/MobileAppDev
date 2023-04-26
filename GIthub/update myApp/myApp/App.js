@@ -1,8 +1,6 @@
 //Import
 import React from "react";
 import CoreComponents from "./src/CoreComponents.js";
-import SignIn from "./src/screens/SignIn";
-import SignIn2 from "./src/screens/SignIn2";
 import Register from "./src/screens/Register";
 import UserList from "./src/screens/UserList";
 
@@ -17,7 +15,7 @@ const App = () => {
 
   //Exercise 9
   //No. 1
-  <Register/>,
+  // <Register/>
   //No. 2
   <UserList/>
   );

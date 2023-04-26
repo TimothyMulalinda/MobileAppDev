@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { StyleSheet, Text, View, FlatList, ScrollView } from 'react-native';
-import List from '../../molecules/List';
+import List from '../../components/molecules/List';
 import axios from 'axios';
 
 const UserList = () => {
@@ -33,8 +33,6 @@ const UserList = () => {
     </View>
   );
 };
-
-export default UserList;
 
 const styles = StyleSheet.create({
   welcome: {
@@ -76,3 +74,5 @@ const styles = StyleSheet.create({
     marginBottom: 5,
   },
 });
+
+export default UserList;

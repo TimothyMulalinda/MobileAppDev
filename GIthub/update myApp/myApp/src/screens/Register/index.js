@@ -1,7 +1,7 @@
-import {StyleSheet, Text, View, TouchableOpacity} from 'react-native';
-import React, {useState, useEffect} from 'react';
-import TextInput from '../../components/molecules/TextInput';
+import React, { useState } from 'react';
+import { ScrollView, View, TextInput, TouchableOpacity, Text, StyleSheet } from 'react-native';
 import Button from '../../components/atoms/Button';
+import CustomTextInput from '../../components/molecules/TextInput';
 
 const Register = () => {
   const [name, setName] = useState('');
@@ -35,49 +35,41 @@ const Register = () => {
   return (
     <ScrollView style={styles.container}>
       <Text style={styles.welcome}>Register</Text>
-
-      <TextInput
+      <CustomTextInput
         label="Name"
         placeholder="Masukkan nama lengkap anda"
         value={name}
         onChangeText={onName}
       />
-
-      <TextInput
+      <CustomTextInput
         label="Username"
         placeholder="Masukkan username anda"
         value={username}
         onChangeText={onUsername}
       />
-
-      <TextInput
+      <CustomTextInput
         label="Email"
         placeholder="Masukkan email anda"
         value={email}
         onChangeText={onEmail}
       />
-
-      <TextInput
+      <CustomTextInput
         label="Address"
         placeholder="Masukkan alamat anda"
         value={address}
         onChangeText={onAddress}
       />
-
-      <TextInput
+      <CustomTextInput
         label="Phone Number"
         placeholder="Masukkan nomor telepon anda"
         value={phoneNumber}
         keyboardType="numeric"
         onChangeText={onPhoneNumber}
       />
-      
       <Button label="Register" onPress={handleRegister} />
     </ScrollView>
   );
 };
-
-export default Register;
 
 const styles = StyleSheet.create({
   container: {
@@ -90,4 +82,7 @@ const styles = StyleSheet.create({
     fontWeight: 'bold',
     margin: 0,
     marginBottom: 50,
-  }});
+  },
+});
+
+export default Register;

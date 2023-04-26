@@ -1,30 +1,40 @@
-import React from 'react';
-import { StyleSheet, Text, TextInput as Input, View } from 'react-native';
+import React from 'react'
+import { TextInput, Text, StyleSheet, View } from 'react-native'
 
-const TextInput = ({label, placeHolder, ...rest}) => {
+const CustomTextInput = ({label, placeholder, value, onChangeText}) => {
   return (
-    <View style={styles.inputContainer}>
-      <Text style={styles.label}>{label}</Text>
-      <Input placeholder={placeHolder} style={styles.text} value={value} onChangeText={text => onChangeText(text)} {...rest} />
+    <View>
+      <Text style={styles.textInput}>{label}</Text>
+      <View style={styles.inputContainer}>
+        <TextInput
+          style={styles.input}
+          placeholder={placeholder}
+          value={value}
+          onChangeText={text => onChangeText(text)}
+
+        />
+      </View>
     </View>
-  );
-};
+  )
+}
 
-export default TextInput;
-
-const styles = StyleSheet.create({
-  inputContainer: {
-    width: '100%',
-    marginBottom: 20},
-  label:{
-    fontSize: 18,
-    fontWeight: 'bold',
-    alignSelf: 'flex-start',
-    marginBottom: 5,
-  },
-  text: {
-    borderWidth: 1,
-    borderRadius: 10,
-    padding: 10
-  }
-});
+const styles = StyleSheet.create({  
+    textInput: {
+      fontSize: 18,
+      fontWeight: 'bold',
+      alignSelf: 'flex-start',
+      marginBottom: 5,
+    },
+    input: {
+      borderWidth: 1,
+      borderRadius: 10,
+      padding: 10
+    },
+    inputContainer: {
+        width: '100%',
+        marginBottom: 20,
+    },
+    
+  });
+  
+export default CustomTextInput
